@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clown Complaint Central 🎪</title>
+  <link rel="icon" href="https://em-content.zobj.net/source/microsoft-teams/363/clown-face_1f921.png">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Comic Neue', cursive;
+      text-align: center;
+      padding: 2rem;
+      color: #4b0082;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+    }
+    form {
+      background: #ffe4f2;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>🤡 Clown Complaint Central 🎪</h1>
+  <p>Because sometimes being dramatic is self-care 💅</p>
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeW3z1oV3GtcBy2qcWk6AQzUCIRUFfBoUKZlXKVXU9P00Aa4w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true">
+    <label for="category">What are we whining about today?</label>
+    <select name="entry.1201179022" id="category" required>
+      <option value="">Choose one</option>
+      <option value="You being annoying">You being annoying</option>
+      <option value="You not replying 😤">You not replying 😤</option>
+      <option value="Feeling ignored">Feeling ignored</option>
+      <option value="Craving attention">Craving attention</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="drama">Spill the drama ☕</label>
+    <textarea name="entry.1912678229" id="drama" rows="4" required></textarea>
+
+    <label for="scale">How bad is it?</label>
+    <select name="entry.786159436" id="scale" required>
+      <option value="">Rate your pain</option>
+      <option value="Minor offense 😒">Minor offense 😒</option>
+      <option value="Mild clownery 🤡">Mild clownery 🤡</option>
+      <option value="I’m losing it 😭">I’m losing it 😭</option>
+      <option value="Unforgivable 🔥">Unforgivable 🔥</option>
+    </select>
+
+    <label for="fix">What would fix it?</label>
+    <input type="text" name="entry.1928581740" id="fix" placeholder="Flowers? Apology? 1000 kisses?" required>
+
+    <button type="submit" onclick="playHonk()">Submit Complaint 🚨</button>
+  </form>
+
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thankyou.html';}"></iframe>
+
+  <audio id="honkSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+  <script>
+    let submitted = false;
+    function playHonk() {
+      document.getElementById('honkSound').play();
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You 🤡</title>
+  <link rel="icon" href="https://em-content.zobj.net/source/microsoft-teams/363/clown-face_1f921.png">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Comic Neue', cursive;
+      text-align: center;
+      padding: 2rem;
+      color: #4b0082;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #ff69b4;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 20px;
+    }
+    a:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Complaint Received!</h1>
+  <p>Your clownery has been recorded. We'll cry about it soon 😭❤️</p>
+  <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="clown gif">
+
+  <a href="index.html">File another complaint 🤡</a>
+</body>
+</html>
+
